@@ -1,0 +1,438 @@
+body {
+  background: var(--background-style);
+  margin: 0;
+}
+
+.Base-Rectangle-Container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Optional: only needed if you want full-page vertical centering */
+}
+
+.Base-Rectangle-Styling {
+  width: 640px;
+  height: 870px;
+  background: linear-gradient(180deg, #0E62E9 0%, #083783 100%);
+  border-left: 15px solid;
+  border-image: linear-gradient(180deg, #FFFFFF 0%, #0E62E9 100%) 1;
+
+  border-top: 15px solid #FFFFFF;
+  
+}
+
+.Content-Of-Card {
+  width: 570px;
+  height: 785px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  margin: 35px; /* Centers the card horizontally */
+  position: absolute;
+  border-radius: 45px; /* Adds a border radius of 45 */
+}
+.Bird-Name {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0; /* Position at the top of the container */
+  width: 570px;
+  height: 60px;
+  background: linear-gradient(90deg, #1265EC 0%, #0A3986 100%);
+  p {
+    font-family: var(--font-instrument-sans);
+    font-size: 36px;
+    color: white;
+    font-weight: bold;
+  }
+}
+
+.Bird-Scientific-Name {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 60px; /* Position directly below the Bird-Name div */
+  width: 570px;
+  height: 20px;
+  background: linear-gradient(90deg, #5E5858 0%, #09547C 100%);
+  p {
+    font-family: var(--font-inter);
+    font-size: 12px;
+    color: white;
+    font-weight: normal;
+    text-align: left;
+    margin: 5px; 
+    
+  }
+}
+
+
+.Image-Container {
+  margin-top: 80px;
+  img {
+  width: 570px;
+  height: 392.5px;
+  }
+}
+.Specific-Information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 150px;
+  height: 260px;
+  padding-left: 25px;
+
+  p {
+    font-family: var(--font-itim);
+    font-size: 14px;
+    font-weight: normal;
+    color: black;
+    margin: 5px 0;
+  }
+}
+.General-Information {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 150px;
+  right: 0;
+  width: 400px;
+  height: 150px;
+  border-radius: 15px;
+  font-family: var(--font-itim);
+  font-size: 19px;
+  color: black;
+}
+
+.Sound-Circle-1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #397EED 0%, #204887 100%);
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+.Sound-Circle-2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  img {
+    display: flex;
+    margin: auto;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.Selection-Container {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Selection-Group, .Selection-Bird {
+  display: flex;
+}
+
+.Group-Selector {
+  background-color: #e6f2ff;
+  border-color: #0056b3;
+}
+
+.Bird-Selector {
+  padding: 8px 12px;
+  border: 2px solid #3a7ca5;
+  border-radius: 8px;
+  background-color: white;
+  font-size: 16px;
+  font-weight: 500;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  min-width: 180px;
+}
+
+.Bird-Selector:hover {
+  border-color: #2c3e50;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.Bird-Selector:focus {
+  outline: none;
+  border-color: #2980b9;
+  box-shadow: 0 0 0 3px rgba(41, 128, 185, 0.3);
+}
+
+/* Admin Panel Styles */
+.admin-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f5f5f5;
+}
+
+.login-container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-container h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+.login-container .error {
+  color: #d32f2f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.login-button, 
+.submit-button,
+.cancel-button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover,
+.submit-button:hover {
+  background-color: #388e3c;
+}
+
+.cancel-button {
+  background-color: #f44336;
+  margin-top: 0.5rem;
+}
+
+.cancel-button:hover {
+  background-color: #d32f2f;
+}
+
+.admin-panel {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.admin-header {
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.admin-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-nav button {
+  padding: 0.75rem 1.5rem;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.admin-nav button.active {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.admin-nav button:hover:not(.active) {
+  background-color: #e0e0e0;
+}
+
+.admin-nav .logout-button {
+  margin-left: auto;
+  background-color: #f44336;
+  color: white;
+  border-color: #f44336;
+}
+
+.admin-nav .logout-button:hover {
+  background-color: #d32f2f;
+}
+
+.admin-content h2 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.admin-form-container {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.admin-form-container h3 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-row {
+  display: flex;
+  gap: 1rem;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.data-table {
+  overflow-x: auto;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+}
+
+.data-table th,
+.data-table td {
+  padding: 0.75rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.data-table th {
+  background-color: #f5f5f5;
+  font-weight: 600;
+}
+
+.data-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.data-table .actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.data-table .edit-button,
+.data-table .delete-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+.data-table .edit-button {
+  background-color: #2196f3;
+  color: white;
+}
+
+.data-table .edit-button:hover {
+  background-color: #1976d2;
+}
+
+.data-table .delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.data-table .delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.birds-table {
+  overflow-x: auto;
+}
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .admin-nav {
+    flex-direction: column;
+  }
+  
+  .admin-nav .logout-button {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
